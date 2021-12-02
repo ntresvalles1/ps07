@@ -1,0 +1,68 @@
+---
+title: " "
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### a little about me...
+hi, i'm nicole (she/her), currently an undergrad studying computer science and data science at smith college. i'm a problem solving enthusiast. besides all these techy stuff, i love taylor swift🎶, singing🎙, and reading📖.
+
+***
+#### currently working on...
++ getting my bachelor degree in computer science and statistical & data science from Smith College, MA
++ learning C
++ developing my understanding of R
+
+*** 
+#### where i'm from...
+i was born in manila, philippines, but spent a large part of my childhood in the island of bato, catanduanes before moving to the united states. 
+
+```{r, echo = FALSE, message = FALSE}
+library(tidyverse)
+library(sf)
+library(maps)
+
+# USA specific data
+library(USAboundaries)
+library(tidycensus)
+library(tmaptools)
+```
+
+```{r , echo = FALSE}
+philippines_cities <- tibble(
+  name = c("Bato", "Manila"), 
+  lat = c(13.6069, 14.5995), 
+  lon = c(124.3199, 120.9842)
+)
+
+# Load maps package map object of US states and plot using default R plot
+world_map <-  maps::map("world", plot = FALSE, fill = TRUE)
+
+# Convert maps package map object to sf object using st_as_sf() again:
+world_sf <- world_map %>% 
+  st_as_sf(crs = 4326)
+
+philippines_cities_sf <- philippines_cities %>% 
+  st_as_sf(coords = c("lon", "lat"), crs = 4326)
+
+
+# Convert maps package map object to sf object using st_as_sf() again & filter to ph:
+philippines_sf <- world_sf %>% 
+  filter(ID == "Philippines")
+
+
+# Plot both layers:
+ggplot() +
+  geom_sf(data = philippines_sf) +
+  geom_sf(data = philippines_cities_sf, aes(col = name), size = 3) +
+  scale_color_manual(values=c("#751AD1","#3399FF")) +
+  labs(title = "the philippines", col = "cities") +
+  theme(panel.background = element_rect(fill = "aliceblue"))
+```
+
+***
+#### call me, beep me if you wanna reach me...
+feel free to reach me [by email](nicoletresvalles01@gmail.com), or any of my socials!
