@@ -1,5 +1,5 @@
 
-#### a little about me…
+### a little about me…
 
 hi, i’m nicole (she/her), currently an undergrad studying computer
 science and data science at smith college. i’m a problem solving
@@ -8,7 +8,7 @@ singing🎙, and reading📖.
 
 ------------------------------------------------------------------------
 
-#### currently working on…
+### currently working on…
 
 -   getting my bachelor degree in computer science and statistical &
     data science from Smith College, MA
@@ -17,7 +17,7 @@ singing🎙, and reading📖.
 
 ------------------------------------------------------------------------
 
-#### where i’m from…
+### where i’m from…
 
 i was born in manila, philippines, but spent a large part of my
 childhood in the island of bato, catanduanes before moving to the united
@@ -27,7 +27,7 @@ states.
 
 ------------------------------------------------------------------------
 
-#### call me, beep me if you wanna reach me…
+### call me, beep me if you wanna reach me…
 
 feel free to reach me [by email](nicoletresvalles01@gmail.com), or any
 of my socials!
